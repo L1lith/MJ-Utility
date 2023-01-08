@@ -2,6 +2,7 @@ import { readFile } from "fs/promises";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import intBetween from "./intBetween.js";
+import isUnique from "./isUnique.js";
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -13,7 +14,8 @@ export default async function censor(str) {
   const bannedWords = (await readFile(bannedWordsFile, "utf8"))
     .split("\n")
     .map((s) => s.trim().toLowerCase())
-    .filter(Boolean);
+    .filter(Boolean)
+    .filter(isUnique);
 
   bannedWords.forEach((bannedWord) => {
     const re = new RegExp(bannedWord, "ig");
