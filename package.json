@@ -1,0 +1,26 @@
+{
+  "name": "mj-utility",
+  "version": "1.0.0",
+  "description": "A set of utilities for making Midjourney prompts",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L1lith/MJ-Utility.git"
+  },
+  "keywords": [
+    "Midjourney",
+    "utility",
+    "javascript",
+    "utilities",
+    "AI"
+  ],
+  "author": "L1lith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/L1lith/MJ-Utility/issues"
+  },
+  "homepage": "https://github.com/L1lith/MJ-Utility#readme"
+}
