@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A set of utilities for making Midjourney prompts",
   "main": "null",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
