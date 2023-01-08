@@ -1,10 +1,12 @@
 import { readFile } from "fs/promises";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import intBetween from "./intBetween.js";
 
 const __filename = fileURLToPath(import.meta.url);
 
 const bannedWordsFile = join(dirname(__filename), "data", "bannedWords.txt");
+const censorCharacters = "*&#$%@!^+";
 
 export default async function censor(str) {
   if (typeof str != "string") throw new Error("Expected a string");
@@ -18,8 +20,15 @@ export default async function censor(str) {
     let match;
     while ((match = re.exec(str))) {
       let replacement = "";
-      for (let i = 0; i < match.length; i++) {
-        replacement += "*";
+      for (let i = 0; i < bannedWord.length; i++) {
+        if (i === 0 && bannedWord.length > 1) {
+          replacement = bannedWord[0];
+        } else if (i === bannedWord.length - 1 && i > 0) {
+          replacement += bannedWord[i];
+        } else {
+          replacement +=
+            censorCharacters[intBetween(0, censorCharacters.length - 1)];
+        }
       }
       str = str.replaceAll(match, replacement);
     }
