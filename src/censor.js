@@ -20,7 +20,6 @@ export default async function censor(str) {
     let match;
     while ((match = re.exec(str))) {
       let replacement = "";
-      console.log(match[0]);
       for (let i = 0; i < bannedWord.length; i++) {
         if (i === 0 && bannedWord.length > 1) {
           replacement = match[0][0];
