@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/L1lith/MJ-Utility/issues"
   },
-  "homepage": "https://github.com/L1lith/MJ-Utility#readme"
+  "homepage": "https://github.com/L1lith/MJ-Utility#readme",
+  "dependencies": {
+    "random-word-generator": "^0.9.9"
+  }
 }
