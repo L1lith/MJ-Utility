@@ -22,11 +22,14 @@ export default async function censor(str) {
     let match;
     while ((match = re.exec(str))) {
       let replacement = "";
+      let current = match[0][i];
       for (let i = 0; i < bannedWord.length; i++) {
-        if (i === 0 && bannedWord.length > 1) {
+        if (/[\s\n]/.test(current)) {
+          replacement += current;
+        } else if (i === 0 && bannedWord.length > 1) {
           replacement = match[0][0];
         } else if (i === bannedWord.length - 1 && i > 0) {
-          replacement += match[0][i];
+          replacement += current;
         } else {
           replacement +=
             censorCharacters[intBetween(0, censorCharacters.length - 1)];
