@@ -26,6 +26,9 @@ export default async function censor(str) {
         const current = match[0][i];
         if (/[\s\n]/.test(current)) {
           replacement += current;
+        } else if (bannedWord.length < 3) {
+          replacement +=
+            censorCharacters[intBetween(0, censorCharacters.length - 1)];
         } else if (i === 0 && bannedWord.length > 1) {
           replacement = match[0][0];
         } else if (i === bannedWord.length - 1 && i > 0) {
