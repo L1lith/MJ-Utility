@@ -9,7 +9,8 @@ async function randomPromptGenerator() {
   for (let i = 0; i < 100; i++) {
     prompt.push(generator.generate());
   }
-  console.log("Your Prompt:\n" + prompt.join(" "));
+  prompt = escapeQuote(await censor(prompt.join(" ")));
+  console.log("Your Prompt:\n" + prompt);
 }
 
 randomPromptGenerator().catch(console.error);
