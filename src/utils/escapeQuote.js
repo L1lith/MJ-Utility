@@ -1,3 +1,5 @@
+import escapeMap from "../data/escapeMap.js";
+
 export default function escapeQuote(str) {
   if (typeof str != "string") throw new Error("Expected a string");
 
