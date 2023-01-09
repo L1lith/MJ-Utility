@@ -22,8 +22,8 @@ export default async function censor(str) {
     let match;
     while ((match = re.exec(str))) {
       let replacement = "";
-      let current = match[0][i];
       for (let i = 0; i < bannedWord.length; i++) {
+        const current = match[0][i];
         if (/[\s\n]/.test(current)) {
           replacement += current;
         } else if (i === 0 && bannedWord.length > 1) {
