@@ -1,8 +1,8 @@
 import randomWordPrompt from "../utils/randomWordPrompt.js";
 import setWeight from "../utils/setWeight.js";
 
-const subPrompts = 4;
-const wordCount = 8;
+const subPrompts = 45;
+const wordCount = 4;
 
 async function randomWordScramble() {
   let prompts = [];
@@ -17,7 +17,7 @@ async function randomWordScramble() {
     waitList.push(done);
   }
   await Promise.all(waitList);
-  const output = prompts.join(",") + " --chaos 10";
+  const output = prompts.join(","); // + " --chaos 10";
   console.log("Your Prompt:\n" + output);
 }
 
