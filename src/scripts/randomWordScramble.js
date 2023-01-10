@@ -2,6 +2,7 @@ import randomWordPrompt from "../utils/randomWordPrompt.js";
 import setWeight from "../utils/setWeight.js";
 
 const subPrompts = 4;
+const wordCount = 8;
 
 async function randomWordScramble() {
   let prompts = [];
@@ -9,7 +10,7 @@ async function randomWordScramble() {
   let waitList = [];
   for (let i = 1; i <= subPrompts; i++) {
     const isPositive = (positive = !positive);
-    const done = randomWordPrompt();
+    const done = randomWordPrompt(wordCount);
     done.then((prompt) => {
       prompts.push(setWeight(prompt, isPositive ? 1 : -1));
     });
