@@ -2,15 +2,13 @@ import Rwg from "random-word-generator";
 import censor from "../utils/censor.js";
 import escapeQuote from "../utils/escapeQuote.js";
 
-async function randomPromptGenerator() {
+export default async function randomWordPrompt(length = 10) {
+  if (!isFinite(length) || length < 1) throw new Error("Invalid Length");
   const generator = new Rwg();
 
   let prompt = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < length; i++) {
     prompt.push(generator.generate());
   }
-  prompt = escapeQuote(await censor(prompt.join(" ")));
-  console.log("Your Prompt:\n" + prompt);
+  return escapeQuote(await censor(prompt.join(" ")));
 }
-
-randomPromptGenerator().catch(console.error);
