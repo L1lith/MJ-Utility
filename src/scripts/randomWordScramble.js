@@ -6,6 +6,7 @@ const subPrompts = Math.round(Math.random() * 30);
 const maxWordCount = 8;
 const decimals = 2;
 const basePrompt = "";
+const flags = "--chaos 10";
 
 async function randomWordScramble() {
   let prompts = [];
@@ -32,7 +33,7 @@ async function randomWordScramble() {
   console.log(
     `~ Stats ~\nAbsolute Weight: ${absWeight}\nNet Weight: ${netWeight}\n\nYour Prompt:\n${basePrompt}::${
       Math.round(absWeight * 100) / 100
-    },${output}`
+    },${output} ${flags}`
   );
 }
 
