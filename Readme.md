@@ -9,7 +9,7 @@ To use this project, you will need to run terminal (called command prompt on Win
 pwd
 ```
 
-It tells me my terminal is currently located at `/Users/lilith` (my home folder) but I want to download the project into my Documents folder so I'll use the `cd` command:
+It tells me my terminal is currently located at `/Users/l1lith` (my home folder) but I want to download the project into my Documents folder so I'll use the `cd` command:
 ```
 cd Documents
 ```
