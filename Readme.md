@@ -1,5 +1,5 @@
 # MidJourney Utility
-This is a collection of tools to help crafting [MidJourney](https://midjourney.com/home/?callbackUrl=%2Fapp%2F) prompts.
+This is a collection of tools to help craft [MidJourney](https://midjourney.com/home/?callbackUrl=%2Fapp%2F) prompts.
 
 ## Setting Up
 First, if you haven't already install [the LTS version of NodeJS.](https://nodejs.org/en/) After that's done, [follow these instructions to install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
