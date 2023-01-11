@@ -7,7 +7,7 @@ import isUnique from "./isUnique.js";
 const __filename = fileURLToPath(import.meta.url);
 
 const bannedWordsFile = join(dirname(__filename), "../data", "bannedWords.txt");
-const censorCharacters = "*&#$%@!^+";
+const censorCharacters = "*#$%@!^+";
 
 export default async function censor(str) {
   if (typeof str != "string") throw new Error("Expected a string");
