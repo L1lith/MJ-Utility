@@ -10,7 +10,8 @@ async function randomWordScramble() {
   let prompts = [];
   let positive = false;
   let waitList = [];
-  let totalWeight = 0;
+  let netWeight = 0;
+  let absWeight = 0;
   for (let i = 1; i <= subPrompts; i++) {
     const isPositive = (positive = !positive);
     const done = randomWordPrompt(intBetween(1, Math.max(maxWordCount, 1)));
@@ -18,7 +19,8 @@ async function randomWordScramble() {
       Math.round(Math.random() * Math.pow(10, decimals)) /
       Math.pow(10, decimals);
     weight = isPositive ? weight : -weight;
-    totalWeight += weight;
+    netWeight += weight;
+    absWeight += Math.abs(weight);
     done.then((prompt) => {
       prompts.push(setWeight(prompt, weight));
     });
@@ -26,7 +28,9 @@ async function randomWordScramble() {
   }
   await Promise.all(waitList);
   const output = prompts.join(","); // + " --chaos 10";
-  console.log(`Total Weight: ${totalWeight}\nYour Prompt:\n${output}`);
+  console.log(
+    `~ Stats ~\nAbsolute Weight: ${absWeight}\nNet Weight: ${netWeight}\n\nYour Prompt:\n${output}`
+  );
 }
 
 randomWordScramble().catch(console.error);
