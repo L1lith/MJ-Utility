@@ -32,7 +32,7 @@ There you go, we should be ready to run commands!
 
 ## Commands
 ### Prompt Scramble
-To create a prompt with a lot of entropy you can use the prompt scramble. Just run the commmand `npm run scramble` in your terminal (it needs to be in the project folder though) It should generate something like this:
+To create a prompt with a lot of entropy you can use the prompt scramble command. Just run `npm run scramble` in your terminal (it needs to be in the project folder though) It should generate something like this:
 ```
 ::6.36,Kovokibune Pijimokiki Nahakoqeso Dexezimole Xuhafebagi Zaziquvute Bagocujusu::0.27,Vitobusone Qemizazuqu Jerufobahu Foqomogiyu Cigohegaba Koyagojoro::-0.65,Lusuyejemi Duporanoni Fubagewuna Qivuqobaye Hodorila!+::0.61,Xusifulofo Lukuwenebe Bokoroguxe::-0.96,Mijeqofoha Tunesiyuko Rawaqifidu::0.99,Dotevinuhe Yivenekuhu Nahucowigu::-0.93,Yat^%uzega Cav!gesuzu Cewuqeqonu Kehewuqepu Zafibu^*ja Heriyon%@e Focubeyeyu::-0.28,Kex#$awowo Cadonotixa Baxetikini::0.68,Kixozodeti Nibujaliki::0.99 --chaos 10
 ```
