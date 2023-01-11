@@ -29,7 +29,7 @@ async function randomWordScramble() {
     waitList.push(done);
   }
   await Promise.all(waitList);
-  const output = prompts.join(","); // + " --chaos 10";
+  const output = prompts.join("+"); // + " --chaos 10";
   console.log(
     `~ Stats ~\nAbsolute Weight: ${absWeight}\nNet Weight: ${netWeight}\n\nYour Prompt:\n${basePrompt}::${
       Math.round(absWeight * 100) / 100
