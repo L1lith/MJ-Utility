@@ -5,6 +5,7 @@
   "main": "null",
   "type": "module",
   "scripts": {
+    "scramble": "node ./src/scripts/randomWordScramble.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

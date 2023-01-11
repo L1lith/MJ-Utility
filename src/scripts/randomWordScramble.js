@@ -5,7 +5,7 @@ import intBetween from "../utils/intBetween.js";
 const subPrompts = Math.round(Math.random() * 30);
 const maxWordCount = 8;
 const decimals = 2;
-const basePrompt = "";
+const basePrompt = "a rope bridge from hell to heaven";
 const flags = "--chaos 10";
 
 async function randomWordScramble() {
